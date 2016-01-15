@@ -1,0 +1,23 @@
+<div class="container">
+      <section class="hero">
+        <img src="http://s3.amazonaws.com/kidzworld_photo/images/2012220/d1cc995f-f5fc-4e95-97ef-ba13be93957d/gallery_HOWTOMAKEPINATA-GALLERY1.jpg" alt="hero">
+      </section>
+
+      <h1>Chitter</h1>
+</div>
+
+<div class="messages">
+  <div class="container">
+
+    <% @peeps.each do |peep| %>
+    <div class="message">
+      <p class="content"><%= peep.content %></p>
+      <p class="time"><%= peep.created_at %></p>
+    </div>
+    <% end %>
+
+    <%= link_to 'New Peep', "/new" %>
+
+
+  </div>
+</div>
